@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: front
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: front
+  template:
+    metadata:
+      labels:
+        app: front
+    spec:
+      containers:
+        - name: front
+          image: erickojeda/front:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 80
+          env:
+            - name: VITE_ENCRYPTION_KEY
+              value: "ti1lg4tHb/LhnkFeMfZxg2vdrcKGuTZeG6WnClnXLk0="
+            - name: VITE_API_URL
+              value: backdfasdfasdf
+
