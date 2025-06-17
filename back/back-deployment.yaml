@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
         - name: back
-          image: erickojeda/back:terraformnginx
+          image: erickojeda/back:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 5000
