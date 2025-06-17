@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
         - name: front
-          image: erickojeda/front:latest
+          image: erickojeda/front:terraformnginx
           imagePullPolicy: Always
           ports:
             - containerPort: 80
