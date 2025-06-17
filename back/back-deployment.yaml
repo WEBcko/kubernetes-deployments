@@ -36,6 +36,11 @@ spec:
                 configMapKeyRef:
                   name: postgres-config
                   key: POSTGRES_DB
+            - name: DATABASE_URL
+              valueFrom:
+                configMapKeyRef:
+                  name: postgres-config
+                  key: DATABASE_URL
             - name: POSTGRES_USER
               valueFrom:
                 configMapKeyRef:
